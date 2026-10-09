@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Terminate already running bar instances
+killall polybar
+
+sleep 1
+
+# Launch bar for primary monitor
+MONITOR=MONITOR_DEFINE polybar monitor-main --config=$HOME/.config/polybar/config.ini &

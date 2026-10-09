@@ -1,0 +1,16 @@
+#!/bin/bash
+set -eou pipefail
+
+SOURCE=$PWD
+TARGET=$HOME/.config/polybar/
+
+monitor=$(xrandr | grep " connected " | awk '{ print$1 }')
+sed -i "s|MONITOR_DEFINE|${monitor}|g" bar.sh.fresh
+
+mv bar.sh.fresh bar.sh
+mv config.ini.fresh config.ini
+
+mkdir -p $TARGET
+cd $TARGET
+ln -s $SOURCE/config.ini
+ln -s $SOURCE/bar.sh
