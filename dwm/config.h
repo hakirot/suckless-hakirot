@@ -52,7 +52,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            0,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+//{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -86,7 +86,7 @@ static const char *dmenucmd[] = { "dmenu_run", NULL};
 static const char *reskincmd[] = { "reskin", "-r", NULL};
 static const char *polybarcmd[] = { "bar.sh", "-r", NULL};
 static const char *termcmd[]  = { "st", NULL };
-static const char *firefoxcmd[]  = { "firefox", NULL };
+//static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *xbcmd[]  = { "xb", NULL };
 
 /* Keeb Knob vol and multimedia key actions */
